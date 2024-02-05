@@ -1,9 +1,8 @@
 import os
 
-
-main_path = os.path.dirname(os.path.abspath(__file__))
-pdf_path = os.path.join(main_path, 'resources', 'file1.pdf')
-txt_path = os.path.join(main_path, 'resources', 'file4.txt')
-xls_path = os.path.join(main_path, 'resources', 'file3.xls')
-xlsx_path = os.path.join(main_path, 'resources', 'file2.xlsx')
-tmp = os.path.join(main_path, 'tmp')
+CURRENT_FILE = os.path.abspath(__file__)
+CURRENT_DIR = os.path.dirname(CURRENT_FILE)
+TMP_DIR = os.path.join(CURRENT_DIR, 'resources')
+RESOURCES_DIR = os.path.join(CURRENT_DIR, 'resources')
+ARCHIVE_DIR = os.path.join(RESOURCES_DIR, 'archive.zip')
+FILES_LIST = os.listdir(TMP_DIR)
